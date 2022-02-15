@@ -6,6 +6,9 @@ const fetchUsers = (params = 'results=20') => {
     .then(data => {
         const user = data.results;
         let str = '';
+        
+      
+        
         user.map((usr)=>{
             str += ` <div class="col-md-6 col-lg-3 py-3">
             <div class="card " style="min-width: 18rem;">
@@ -52,4 +55,9 @@ const handleonchange = (e) => {
    fetchUsers(params);
 
 }
-
+const handleonType = (e) => {
+console.log(e.value);
+}
+const findingName =(usr) => {
+    
+}
