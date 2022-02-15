@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    padding: 0;
+}
+.wrapper {
+    min-height: 100vh;
+     background: linear-gradient(#e66465, #9198e5);
+     padding: 10;
+
+}
+.deco{
+    background: linear-gradient(#e66465, #9198e5);
+    padding: 5px;
+    border-radius: 50%;
+}
+span{
+    line-height: 2.5rem;
+}
