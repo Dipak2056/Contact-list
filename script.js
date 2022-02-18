@@ -1,14 +1,21 @@
 const   apiurl= 'https://randomuser.me/api/?';
 const listElm = document.querySelector('#list');
+
 const fetchUsers = (params = 'results=20') => {
 
     fetch(apiurl+params).then(respose =>respose.json())
     .then(data => {
+
         const user = data.results;
+
+        let names = [];
+        
+        for(i=0;i<user.length;i++){
+             names.push(user[i].name.first+user[i].name.last);
+        }
+        console.log(names);
+        
         let str = '';
-        
-      
-        
         user.map((usr)=>{
             str += ` <div class="col-md-6 col-lg-3 py-3">
             <div class="card " style="min-width: 18rem;">
@@ -55,9 +62,16 @@ const handleonchange = (e) => {
    fetchUsers(params);
 
 }
-const handleonType = (e) => {
-console.log(e.value);
-}
-const findingName =(usr) => {
+let searchingName = [];
+const  handleonType = (e) => {
+searchingName.push(e.value);
+if (searchingName.length > 1){
+    searchingName.shift();
     
+}
+
+}
+
+const findingName =() => {
+
 }
