@@ -27,7 +27,11 @@
     <div class="row">
     <div class="col">
         
-            <input type="text" onchange="handleonType(this)" class="form-control" name="search" placeholder="Search a contact">
+            <input type="text" 
+            id="search"
+            onchange="handleonchange(this)" 
+            onkeyup="handleOnSearch()"
+            class="form-control" name="search" placeholder="Search a contact">
         
     </div>
     <div class="col">
@@ -36,6 +40,9 @@
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select>
+    </div>
+    <div id="result" class="col d-none">
+        <p>We found <span id="foundnumber">0</span> users.</p>
     </div>
     </div>
     <hr>
